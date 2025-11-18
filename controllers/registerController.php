@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 	//Verifico si esta logueado el usuario
 	if (isset($_SESSION['user'])) {
@@ -27,9 +27,9 @@
 
 	$usuario = new Usuarios();
 
-	if(isset($_POST["btn_login"])){
+	if(isset($_POST["btn_register"])){
 
-		$result = $usuario->login($_POST); 
+		$result = $usuario->register($_POST); 
 		if($result["errno"] == 202){
 			header("Location: ?slug=panel");
 		}
@@ -38,20 +38,13 @@
 
 	}
 
+	/* Se instancia a la clase del motor de plantillas */
+	$tpl = new Enano("register");
 
+	$tpl->assignVar(["APP_SECTION" => "Register", "ERRNO" => $errno, "ERROR" => $error]);
 
-	/***
-	 * 
-	 * Al final siempre se imprime la vista
-	 * 
-	 * */
-
-	$tpl = new Enano("login");
-
-	/*para asignar valor a las variables dentro la plantilla*/
-	/* formato {{ variable }} valor a pasar como un vector asociativo [ variable_html => valor] */
-	$tpl->assignVar(["APP_SECTION" => "Login", "ERRNO" => $errno, "ERROR" => $error]);
-
+	/* Imprime la plantilla en la página */
 	$tpl->printToScreen();
+
 
  ?>

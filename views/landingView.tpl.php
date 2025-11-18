@@ -8,14 +8,14 @@
     </header>
 
     <nav>
-        <a href="#features">Funcionalidades</a>
+        <!-- <a href="#features">Funcionalidades</a>
         <a href="#seguridad">Seguridad</a>
-        <a href="#analiticas">Analíticas</a>
+        <a href="#analiticas">Analíticas</a> -->
         <a href="?slug=login">Iniciar Sesión</a>
     </nav>
 
     <section class="hero">
-        <img src="https://images.unsplash.com/photo-1549416562-42ecceeb2995?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Estación Meteorológica en Campo">
+        <img src="https://tecscience.tec.mx/es/wp-content/uploads/sites/8/2024/12/gencast-prediccion-clima.jpg" alt="Estación Meteorológica en Campo">
         <div class="hero-text">
             <h2>Monitoreo Climático y Seguridad Avanzada</h2>
             <p>Accede a datos en tiempo real de temperatura, humedad y presión de nuestras estaciones. Visualiza tendencias con gráficos dinámicos y mantén tu cuenta segura con nuestro sistema de notificaciones.</p>
@@ -24,7 +24,7 @@
     </section>
 
     <section class="features" id="features">
-        <h3>¿Qué ofrece App-Estación?</h3>
+        <h3>¿Qué ofrece {{ APP_NAME }}?</h3>
         <div class="feature-grid">
             <div class="feature">
                 <h4>📊 Datos en Tiempo Real</h4>

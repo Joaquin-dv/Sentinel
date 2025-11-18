@@ -14,6 +14,11 @@
 	require "models/DBAbstract.php"; /*Modelo de conexión a la db*/
 	require "librarys/Enano.php"; /*Motor de plantillas*/
 
+	include "librarys/Mailer/src/PHPMailer.php";
+	include "librarys/Mailer/src/SMTP.php";
+	include "librarys/Mailer/src/Exception.php";
+	session_start();
+
 	$section = "landing"; /*por defecto section es landing*/
 
 	if(isset($_GET['slug'])){ /* en caso de que se especifique una sección*/

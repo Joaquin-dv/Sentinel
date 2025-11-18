@@ -1,5 +1,9 @@
 <?php
 
+	if (!isset($_SESSION['user'])) {
+		header("Location: ?slug=login");		
+	}
+
 	/* Se instancia a la clase del motor de plantillas */
 	$tpl = new Enano("estacion");
 
