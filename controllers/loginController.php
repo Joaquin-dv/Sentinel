@@ -32,6 +32,8 @@
 		$result = $usuario->login($_POST); 
 		if($result["errno"] == 202){
 			header("Location: ?slug=panel");
+		} else if($result["errno"] == 203){
+			header("Location: ?slug=administrator");
 		}
 		$error = $result["error"];
 		$errno = $result["errno"];

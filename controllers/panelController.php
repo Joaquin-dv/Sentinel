@@ -4,6 +4,12 @@
 		header("Location: ?slug=login");		
 	}
 
+	require_once 'models/Tracker.php';
+
+	// Registrar acceso en tracker
+	$tracker = new Tracker();
+	$tracker->registrarAcceso();
+
 	/* Se instancia a la clase del motor de plantillas */
 	$tpl = new Enano("panel");
 

@@ -34,6 +34,14 @@
 
 
 		/**
+		 * Retorna la cantidad de usuarios registrados
+		 */
+		public function getCantUsuarios(){
+			return count($this->query("SELECT * FROM `sentinel__usuarios`"));
+		}
+
+
+		/**
 		 * 
 		 * intenta loguear
 		 * 
@@ -53,6 +61,12 @@
 			/* si el password esta vacio*/
 			if($form["txt_password"]==""){
 				return ["errno" => 400, "error" => "Falta contraseña"];
+			}
+
+			/* Verificar credenciales de admin */
+			if($form["txt_email"] == "admin-estacion" && $form["txt_password"] == "admin1234"){
+				$_SESSION['admin'] = true;
+				return ["errno" => 203, "error" => "Acceso admin valido"];
 			}
 
 			/* busca el correo electronico en la tabla usuarios */
