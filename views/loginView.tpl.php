@@ -27,7 +27,7 @@
             color: var(--fondo-header-gradiente-fin);
         }
 
-        .login-container input[type="email"],
+        .login-container input[type="text"],
         .login-container input[type="password"] {
             width: 100%;
             padding: 0.8rem 1rem;
@@ -60,7 +60,7 @@
 	<div class="login-container">
         <h2>Iniciar Sesión</h2>
         <form action="?slug=login" method="POST">
-            <input type="email" name="txt_email" placeholder="Correo electrónico" required>
+            <input type="text" name="txt_email" placeholder="Correo electrónico" required>
             <input type="password" name="txt_password" placeholder="Contraseña" required>
             <p><a href="?slug=recovery">Olvidaste tu contraseña?</a></p>
             <button type="submit" name="btn_login">Acceder</button>
